@@ -51,6 +51,10 @@ function Calc() {
     }
   }
 
+  const handleClickDonate = async () => {
+
+  }
+
   return (
     <>
       {Calc && web3State.chainId === 4 ? (
@@ -81,6 +85,17 @@ function Calc() {
         <p className="text-warning px-4">CAN INIT CONTRACT</p>
 
       )}
+      <div className="tip-button text-center mt-2">
+        <input className='text-danger'
+          id="Donate"
+          type="number"
+          placeholder="ether ammount"
+
+        />
+        <button className="text-warning " onClick={handleClickDonate} src="https://cdn.rawgit.com/eth-button/eth-button/09673e85d517452e18a5248b96115bc552a0ac01/dist/eth-button.js" data-address="{0x9AB7466b1a6eA0C7D27b3de65Ed84ee1e28D9273}" data-meta="eth-button">Donate</button>
+
+      </div>
+
     </>
   )
 }
